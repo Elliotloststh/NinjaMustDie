@@ -39,4 +39,8 @@ public class UserServiceImpl implements UserService {
         log.info("in getAllId");
         return userDao.getAllId();
     }
+
+    public String getId(String id) {
+        return userDao.getId(id);
+    }
 }

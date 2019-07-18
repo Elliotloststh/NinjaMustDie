@@ -1,6 +1,6 @@
 server:
   port:
-    10000
+    3817
 
 debug:
   true
@@ -11,9 +11,9 @@ spring:
 
   datasource:
       name: test
-      url: jdbc:mysql://119.23.226.114/ren3
+      url: jdbc:mysql://101.132.185.90/ren3
       username: root
-      password: baichi82995087
+      password: 19980508yjh
       type: com.alibaba.druid.pool.DruidDataSource
       driver-class-name: com.mysql.cj.jdbc.Driver
 
