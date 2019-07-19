@@ -37,7 +37,7 @@
             /*}*/
 
             .logo {height: 25%;padding-top: 2px;}
-            .form {height: 80%;border: 4px solid #000;border-radius: 22px;background-color: #fff;padding: 0 5%;font-size: 14px;}
+            .form {height: 92%;border: 4px solid #000;border-radius: 22px;background-color: #fff;padding: 0 5%;font-size: 14px;}
             /*.title {height: 8%;padding-top: 2%;}*/
             .title {padding-top: 2%;font-size: 25px;font-weight: bold;}
             .form-item {padding: 1% 0;display: flex;-ms-display: flex;-webkit-display: flex;-moz-display: flex;align-items: center;-ms-align-items: center;-webkit-align-items: center;-moz-align-items: center;justify-content: flex-start;-ms-justify-content: flex-start;-webkit-justify-content: flex-start;-moz-justify-content: flex-start;font-size: 18px;text-align: left;}
@@ -62,9 +62,10 @@
             .uid-tip {text-align: left;padding-top: 1%;}
             .info {text-align: left;font-weight: bold;padding-top: 5px;}
             .info p {padding-bottom: 5px;}
-            .submit {position: absolute;width: 90%;bottom: 3%;text-align: center;}
+            /*.submit {position: absolute;width: 90%;bottom: 3%;text-align: center;}*/
+            .submit {width: 90%;bottom: 3%;text-align: center;}
             .submit img {width: 33%;}
-            #btn2 {margin:auto}
+            #btn2 {margin-top: 2%}
             #f1 {margin-bottom: 4%}
 
             /*弹出窗*/
@@ -104,6 +105,18 @@
                 } else {
                     $('.mw').height(height);
                 }
+
+                var isMobile = /Android|webOS|iPhone|iPad|BlackBerry/i.test(navigator.userAgent);
+                if (isMobile) {
+                    // 当前网页在手机端打开
+                    console.log("手机打开");
+                    $('.logo').css('display', 'none');
+                } else {
+                    // 当前网页在PC端打开
+                    console.log("PC打开");
+                    $('.form').css('height', '80%');
+                }
+
             })
         </script>
     </head>
@@ -117,7 +130,7 @@
                     <span class="label">兑换码：</span>
                     <input id="dhm" type="text">
                 </div>
-                <div id="submit1">
+                <div class="submit" id="submit1">
                     <img src="./礼包码兑换_files/submit.png" alt="">
                 </div>
                 <div class="form-item">
@@ -132,11 +145,14 @@
                     <input id="uid" type="text">
                 </div>
                 <div class="uid-tip"><img src="./礼包码兑换_files/info.png">UID为个人信息界面9位数字ID</div>
-                <div class="form-item" id="submit2">
-                    <div id="btn2" >
-                        <img src="./礼包码兑换_files/add.png" alt="">
-                    </div>
+                <div id="btn2" class="submit">
+                    <img src="./礼包码兑换_files/add.png" alt="">
                 </div>
+                <!--<div class="form-item submit" id="submit2">-->
+                    <!--<div id="btn2" >-->
+                        <!--<img src="./礼包码兑换_files/add.png" alt="">-->
+                    <!--</div>-->
+                <!--</div>-->
                 <div class="tip"></div>
                 <div class="success"></div>
             </div>
@@ -171,7 +187,7 @@
 
 
         $(function () {
-            $('#submit2').click(function () {
+            $('#btn2').click(function () {
                 var v = $('#uid').val();
                 if (v.length === 9) {
                     $('.tip').removeClass('success').text("添加中...");
