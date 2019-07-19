@@ -56,11 +56,11 @@ public class Ren3Controller {
             JSONObject jsonObject = JSONObject.parseObject(result);
             Integer status = (Integer) jsonObject.get("code");
             JSONObject data = JSONObject.parseObject(jsonObject.getString("data"));
-            String nick_name = data.getString("name");
             if (status == 0) {
+                String nick_name = data.getString("name");
                 if(userService.getId(id) != null) {
                     ResponseData responseData = ResponseData.customerError();
-                    responseData.putDataValue("msg", "你的ID数据库里早就有了，别重复加了");
+                    responseData.putDataValue("msg", "你已经添加过了");
                     return responseData;
                 }
                 if (userService.insertId(id, nick_name)) {
@@ -115,6 +115,7 @@ public class Ren3Controller {
                 } else {
                     responseData.putDataValue(id.getNick_name(), "兑换码错误");
                     flag2 = true;
+                    break;
                 }
             } catch (IOException e) {
                 log.info(e.getMessage());

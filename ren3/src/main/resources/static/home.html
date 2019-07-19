@@ -37,7 +37,7 @@
             /*}*/
 
             .logo {height: 25%;padding-top: 2px;}
-            .form {height: 92%;border: 4px solid #000;border-radius: 22px;background-color: #fff;padding: 0 5%;font-size: 14px;}
+            .form {height: 72%;border: 4px solid #000;border-radius: 22px;background-color: #fff;padding: 0 5%;font-size: 14px;}
             /*.title {height: 8%;padding-top: 2%;}*/
             .title {padding-top: 2%;font-size: 25px;font-weight: bold;}
             .form-item {padding: 1% 0;display: flex;-ms-display: flex;-webkit-display: flex;-moz-display: flex;align-items: center;-ms-align-items: center;-webkit-align-items: center;-moz-align-items: center;justify-content: flex-start;-ms-justify-content: flex-start;-webkit-justify-content: flex-start;-moz-justify-content: flex-start;font-size: 18px;text-align: left;}
@@ -48,7 +48,7 @@
             .uid-tip img {width: 14px;transform: translateY(1px);-webkit-transform: translateY(1px);}
             @media all and (min-width: 960px) {
                 .main {-webkit-background-size: cover;background-position: initial;}
-                .title {padding-top: 2%;font-size: 50px;font-weight: bold;}
+                .title {padding-top: 2%;font-weight: bold;}
                 .form {font-size: 25px;}
                 .form-item {font-size: 30px;}
                 .form-item input {font-size: 30px;border-radius: 15px;}
@@ -87,8 +87,6 @@
                 margin-left: 25%;
                 font-size: large;
             }
-
-
         </style>
 
         <script>
@@ -110,7 +108,7 @@
                 if (isMobile) {
                     // 当前网页在手机端打开
                     console.log("手机打开");
-                    $('.logo').css('display', 'none');
+                    // $('.logo').css('display', 'none');
                 } else {
                     // 当前网页在PC端打开
                     console.log("PC打开");
@@ -125,7 +123,7 @@
         <div class="mw">
             <img class="logo" src="./礼包码兑换_files/logo.png" alt="">
             <div class="form">
-                <p class="title" style="font-size: 45px">长夜一起拿兑换码</p>
+                <p class="title">长夜一起拿兑换码</p>
                 <div class="form-item" id="f1">
                     <span class="label">兑换码：</span>
                     <input id="dhm" type="text">
@@ -159,9 +157,7 @@
         </div>
     </div>
 
-    <footer style="text-align: center; font-size: 20px">技术支持: 小陈同学、超越</footer>
-
-
+    <footer style="text-align: center; font-size: 18px">技术支持: 小陈同学、超越</footer>
     <!--Call your modal-->
     <a id="demo01" href="#animatedModal" style="display: none;">DEMO01</a>
 
