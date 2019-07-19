@@ -1,5 +1,8 @@
-package com.chen.ren3;
+package com.chen.ren3.service.impl;
 
+import com.chen.ren3.dao.UserDao;
+import com.chen.ren3.entity.Users;
+import com.chen.ren3.service.UserService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,10 +25,10 @@ public class UserServiceImpl implements UserService {
         this.userDao = userDao;
     }
 
-    public boolean insertId(String id) {
-        log.info("in insertId");
-        int num = userDao.insertId(id);
-        log.info("id  " + String.valueOf(num));
+    public boolean insertId(String id, String nick_name) {
+        log.info("in insertId  " + id + "  " + nick_name);
+        int num = userDao.insertId(id, nick_name);
+        log.info("num  " + String.valueOf(num));
         if (num == 0) {
             log.info("insertion failed");
             return false;
@@ -35,7 +38,7 @@ public class UserServiceImpl implements UserService {
         }
     }
 
-    public List<String> getAllId() {
+    public List<Users> getAllId() {
         log.info("in getAllId");
         return userDao.getAllId();
     }

@@ -1,6 +1,10 @@
-package com.chen.ren3;
+package com.chen.ren3.controller;
 
 import com.alibaba.fastjson.JSONObject;
+import com.chen.ren3.entity.Users;
+import com.chen.ren3.service.impl.GiftService;
+import com.chen.ren3.ResponseData;
+import com.chen.ren3.service.UserService;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.CloseableHttpClient;
@@ -48,17 +52,18 @@ public class Ren3Controller {
         log.info("in add  " + id);
         try {
             String result = sendGet("http://statistics.pandadastudio.com/player/simpleInfo?uid=" + id);
-            System.out.println(result);
-//            log.info(result);
+            log.info(result);
             JSONObject jsonObject = JSONObject.parseObject(result);
             Integer status = (Integer) jsonObject.get("code");
+            JSONObject data = JSONObject.parseObject(jsonObject.getString("data"));
+            String nick_name = data.getString("name");
             if (status == 0) {
                 if(userService.getId(id) != null) {
                     ResponseData responseData = ResponseData.customerError();
                     responseData.putDataValue("msg", "你的ID数据库里早就有了，别重复加了");
                     return responseData;
                 }
-                if (userService.insertId(id)) {
+                if (userService.insertId(id, nick_name)) {
                     giftService.deleteAll();
                     return ResponseData.ok();
                 } else {
@@ -89,31 +94,31 @@ public class Ren3Controller {
         }
 
         log.info("in key  " + key);
-        List<String> ids = userService.getAllId();
+        List<Users> ids = userService.getAllId();
         ResponseData responseData = ResponseData.ok();
         String url = "http://statistics.pandadastudio.com/player/giftCode?uid=%s&code=%s";
         boolean flag = false;
         boolean flag2 = false;
-        for (String id: ids) {
+        for (Users id: ids) {
             try {
-                String tmp_url = String.format(url, id, key);
+                String tmp_url = String.format(url, id.getId(), key);
                 log.info(tmp_url);
                 String result = sendGet(tmp_url);
                 log.info(result);
                 JSONObject jsonObject = JSONObject.parseObject(result);
                 Integer status = (Integer) jsonObject.get("code");
                 if (status == 0) {
-                    responseData.putDataValue(id, "小白爱你哦");
+                    responseData.putDataValue(id.getNick_name(), "小白爱你哦");
                     flag = true;
                 } else if(status == 425) {
-                    responseData.putDataValue(id, "礼包已领取");
+                    responseData.putDataValue(id.getNick_name(), "礼包已领取");
                 } else {
-                    responseData.putDataValue(id, "兑换码错误");
+                    responseData.putDataValue(id.getNick_name(), "兑换码错误");
                     flag2 = true;
                 }
             } catch (IOException e) {
                 log.info(e.getMessage());
-                responseData.putDataValue(id, "小白Ma没了");
+                responseData.putDataValue(id.getNick_name(), "小白Ma没了");
             }
         }
 
@@ -148,8 +153,8 @@ public class Ren3Controller {
         return result;
     }
 
-    public static String unicodeToString(String unicode) {
-        StringBuffer sb = new StringBuffer();
+    private static String unicodeToString(String unicode) {
+        StringBuilder sb = new StringBuilder();
         String[] hex = unicode.split("\\\\u");
         for (int i = 1; i < hex.length; i++) {
             int index = Integer.parseInt(hex[i], 16);

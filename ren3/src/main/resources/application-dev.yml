@@ -20,4 +20,4 @@ spring:
 
 mybatis:
     mapperLocations: classpath:mapper/*.xml
-    typeAliasesPackage: com.chen.ren3
+    typeAliasesPackage: com.chen.ren3.entity

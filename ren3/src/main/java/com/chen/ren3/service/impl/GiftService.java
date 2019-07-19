@@ -1,5 +1,6 @@
-package com.chen.ren3;
+package com.chen.ren3.service.impl;
 
+import com.chen.ren3.dao.GiftDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

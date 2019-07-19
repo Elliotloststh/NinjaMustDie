@@ -1,4 +1,4 @@
-package com.chen.ren3;
+package com.chen.ren3.dao;
 
 import org.apache.ibatis.annotations.*;
 

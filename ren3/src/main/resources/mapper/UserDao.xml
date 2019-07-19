@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.chen.ren3.UserDao">
+<mapper namespace="com.chen.ren3.dao.UserDao">
 
     <insert id="insertId">
-        insert into users values (#{id})
+        insert into users values (#{id}, #{nick_name})
     </insert>
 
-    <select id="getAllId" resultType="String">
-        select distinct id from users;
+    <select id="getAllId" resultType="com.chen.ren3.entity.Users">
+        select * from users;
     </select>
 
 </mapper>

@@ -1,163 +1,235 @@
 <!DOCTYPE html>
 <!-- saved from url=(0055)http://statistics.pandadastudio.com/player/giftCodeView -->
-<html lang="en" data-dpr="1" style="font-size: 140.3px;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html lang="en" data-dpr="1" style="font-size: 140.3px;">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="./礼包码兑换_files/jquery.min.js"></script>
-    <script src="./礼包码兑换_files/flexible.js"></script>
-    <!-- <script src="./礼包码兑换_files/jquery.min.js"></script>
-    <script src="./礼包码兑换_files/flexible.js"></script> -->
-    <title>礼包码兑换</title>
-    <style>
-        body {font-family: Microsoft YaHei,SimSun,sans-serif;}
-        div {box-sizing: border-box;}
-        p {margin: 0;padding 0;}
-        input {height: auto;padding: 0; margin: 0;}
-        body {margin: 0;padding: 0;height: 100vh;}
-        .main {width: 100%;height: 100%;background: url("./礼包码兑换_files/bg.png") no-repeat;-webkit-background-size: auto 600px;background-size: auto 600px;background-position: -146px 0;}
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <script src="./礼包码兑换_files/jquery.min.js"></script>
+        <script src="./礼包码兑换_files/flexible.js"></script>
 
-        .mw {text-align: center;position: relative;}
-        /*@media (orientation: landscape){*/
-        /*.mw {float: right;width: 33%;margin-right: 7%;}*/
-        /*}*/
-        /*@media (orientation: portrait) {*/
-        /*.mw {position: absolute;width: 80%; top: 20%;margin: 0 10%;}*/
-        /*}*/
+        <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+        <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">-->
+        <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+        <!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>-->
 
-        .logo {height: 25%;padding-top: 2px;}
-        .form {height: 80%;border: 4px solid #000;border-radius: 22px;background-color: #fff;padding: 0 5%;font-size: 14px;}
-        /*.title {height: 8%;padding-top: 2%;}*/
-        .title {padding-top: 2%;font-size: 25px;font-weight: bold;}
-        .form-item {padding: 1% 0;display: flex;-ms-display: flex;-webkit-display: flex;-moz-display: flex;align-items: center;-ms-align-items: center;-webkit-align-items: center;-moz-align-items: center;justify-content: flex-start;-ms-justify-content: flex-start;-webkit-justify-content: flex-start;-moz-justify-content: flex-start;font-size: 18px;text-align: left;}
-        /*.form-item .label {flex-shrink: 0;-ms-flex-shrink: 0;-webkit-flex-shrink: 0;-moz-flex-shrink: 0;}*/
-        .form-item .label {flex-shrink: 0;-ms-flex-shrink: 0;-webkit-flex-shrink: 0;-moz-flex-shrink: 0;font-weight: bold;width: 75px;}
-        .form-item input {outline: none;margin-left: 1%;text-align: center;min-width: 1px;width: 100%;border: 2px solid;border-radius: 9px;font-size: 18px;}
-        /*.form-item img {height: 20px;}*/
-        .uid-tip img {width: 14px;transform: translateY(1px);-webkit-transform: translateY(1px);}
-        @media all and (min-width: 960px) {
-            .main {-webkit-background-size: cover;background-position: initial;}
-            .title {padding-top: 2%;font-size: 50px;font-weight: bold;}
-            .form {font-size: 25px;}
-            .form-item {font-size: 30px;}
-            .form-item input {font-size: 30px;border-radius: 15px;}
-            .form-item .label {width: 120px;}
-            .uid-tip {font-size: 15px;}
-            .uid-tip img {width: 15px;}
-            /*.form-item img {height: 40px;}*/
-        }
-        .tip {color: #eb413d;font-weight: bold;text-align: left;}
-        .success {color: #35b24b;}
-        .uid-tip {text-align: left;padding-top: 1%;}
-        .info {text-align: left;font-weight: bold;padding-top: 5px;}
-        .info p {padding-bottom: 5px;}
-        .submit {position: absolute;width: 90%;bottom: 3%;text-align: center;}
-        .submit img {width: 33%;}
-        #btn2 {margin:auto}
-        #f1 {margin-bottom: 4%}
-    </style><script>
-        $(function () {
-            var height = window.innerWidth;
-            if (window.innerWidth > window.innerHeight) {
-                $('.mw').css('float', 'right').css('width', '33%').css('margin-right', '7%');
-                height = window.innerHeight;
-            } else {
-                $('.mw').css('position', 'absolute').css('width', '80%').css('top', '20%').css('margin', '0 10%');
+        <link rel="stylesheet" href="./css/normalize.min.css">
+        <link rel="stylesheet" href="./css/animate.min.css">
+
+
+        <title>长夜——礼包码兑换</title>
+
+        <style>
+            body {font-family: Microsoft YaHei,SimSun,sans-serif;}
+            div {box-sizing: border-box;}
+            p {margin: 0;padding: 0;}
+            input {height: auto;padding: 0; margin: 0;}
+            body {margin: 0;padding: 0;height: 100vh;}
+            .main {width: 100%;height: 100%;background: url("./礼包码兑换_files/bg.png") no-repeat;-webkit-background-size: auto 600px;background-size: auto 600px;background-position: -146px 0;}
+
+            .mw {text-align: center;position: relative;}
+            /*@media (orientation: landscape){*/
+            /*.mw {float: right;width: 33%;margin-right: 7%;}*/
+            /*}*/
+            /*@media (orientation: portrait) {*/
+            /*.mw {position: absolute;width: 80%; top: 20%;margin: 0 10%;}*/
+            /*}*/
+
+            .logo {height: 25%;padding-top: 2px;}
+            .form {height: 80%;border: 4px solid #000;border-radius: 22px;background-color: #fff;padding: 0 5%;font-size: 14px;}
+            /*.title {height: 8%;padding-top: 2%;}*/
+            .title {padding-top: 2%;font-size: 25px;font-weight: bold;}
+            .form-item {padding: 1% 0;display: flex;-ms-display: flex;-webkit-display: flex;-moz-display: flex;align-items: center;-ms-align-items: center;-webkit-align-items: center;-moz-align-items: center;justify-content: flex-start;-ms-justify-content: flex-start;-webkit-justify-content: flex-start;-moz-justify-content: flex-start;font-size: 18px;text-align: left;}
+            /*.form-item .label {flex-shrink: 0;-ms-flex-shrink: 0;-webkit-flex-shrink: 0;-moz-flex-shrink: 0;}*/
+            .form-item .label {flex-shrink: 0;-ms-flex-shrink: 0;-webkit-flex-shrink: 0;-moz-flex-shrink: 0;font-weight: bold;width: 75px;}
+            .form-item input {outline: none;margin-left: 1%;text-align: center;min-width: 1px;width: 100%;border: 2px solid;border-radius: 9px;font-size: 18px;}
+            /*.form-item img {height: 20px;}*/
+            .uid-tip img {width: 14px;transform: translateY(1px);-webkit-transform: translateY(1px);}
+            @media all and (min-width: 960px) {
+                .main {-webkit-background-size: cover;background-position: initial;}
+                .title {padding-top: 2%;font-size: 50px;font-weight: bold;}
+                .form {font-size: 25px;}
+                .form-item {font-size: 30px;}
+                .form-item input {font-size: 30px;border-radius: 15px;}
+                .form-item .label {width: 120px;}
+                .uid-tip {font-size: 15px;}
+                .uid-tip img {width: 15px;}
+                /*.form-item img {height: 40px;}*/
             }
-            if (window.innerWidth > 960) {
-                $('.mw').height(700);
-            } else {
-                $('.mw').height(height);
+            .tip {color: #eb413d;font-weight: bold;text-align: left;}
+            .success {color: #35b24b;}
+            .uid-tip {text-align: left;padding-top: 1%;}
+            .info {text-align: left;font-weight: bold;padding-top: 5px;}
+            .info p {padding-bottom: 5px;}
+            .submit {position: absolute;width: 90%;bottom: 3%;text-align: center;}
+            .submit img {width: 33%;}
+            #btn2 {margin:auto}
+            #f1 {margin-bottom: 4%}
+
+            /*弹出窗*/
+            #btn-close-modal {
+                width:100%;
+                text-align: center;
+                font-size: xx-large;
+                cursor:pointer;
+                color:#fff;
             }
-        })
-    </script></head>
 
-<div class="main">
-    <div class="mw">
-        <img class="logo" src="./礼包码兑换_files/logo.png" alt="">
-        <div class="form">
-            <p class="title" style="font-size: 45px">长夜一起拿兑换码</p>
-            <div class="form-item" id="f1">
-                <span class="label">兑换码：</span>
-                <input id="dhm" type="text">
-            </div>
-            <div id="submit1">
-                <img src="./礼包码兑换_files/submit.png" alt="">
-            </div>
-            <div class="form-item">
-                <span >----添加你的ID到家族----</span>
-            </div>
-            <!--        <div class="form-item">-->
-            <!--            <span >-&#45;&#45;添加ID需要1到2秒哦~-&#45;&#45;</span>-->
-            <!--        </div>-->
+            h1 {
+                margin-top: 2%;
+                text-align: center;
+                margin-bottom: 2%;
+            }
 
-            <div class="form-item">
-                <span class="label">UID：</span>
-                <input id="uid" type="text">
-            </div>
-            <div class="uid-tip"><img src="./礼包码兑换_files/info.png">UID为个人信息界面9位数字ID</div>
-            <div class="form-item" id="submit2">
-                <div id="btn2" >
-                    <img src="./礼包码兑换_files/add.png" alt="">
+            .list-item {
+                margin-left: 25%;
+                font-size: large;
+            }
+
+
+        </style>
+
+        <script>
+            $(function () {
+                var height = window.innerWidth;
+                if (window.innerWidth > window.innerHeight) {
+                    $('.mw').css('float', 'right').css('width', '33%').css('margin-right', '7%');
+                    height = window.innerHeight;
+                } else {
+                    $('.mw').css('position', 'absolute').css('width', '80%').css('top', '20%').css('margin', '0 10%');
+                }
+                if (window.innerWidth > 960) {
+                    $('.mw').height(700);
+                } else {
+                    $('.mw').height(height);
+                }
+            })
+        </script>
+    </head>
+<body>
+    <div class="main">
+        <div class="mw">
+            <img class="logo" src="./礼包码兑换_files/logo.png" alt="">
+            <div class="form">
+                <p class="title" style="font-size: 45px">长夜一起拿兑换码</p>
+                <div class="form-item" id="f1">
+                    <span class="label">兑换码：</span>
+                    <input id="dhm" type="text">
                 </div>
+                <div id="submit1">
+                    <img src="./礼包码兑换_files/submit.png" alt="">
+                </div>
+                <div class="form-item">
+                    <span >----添加你的ID到家族----</span>
+                </div>
+                <!--        <div class="form-item">-->
+                <!--            <span >-&#45;&#45;添加ID需要1到2秒哦~-&#45;&#45;</span>-->
+                <!--        </div>-->
+
+                <div class="form-item">
+                    <span class="label">UID：</span>
+                    <input id="uid" type="text">
+                </div>
+                <div class="uid-tip"><img src="./礼包码兑换_files/info.png">UID为个人信息界面9位数字ID</div>
+                <div class="form-item" id="submit2">
+                    <div id="btn2" >
+                        <img src="./礼包码兑换_files/add.png" alt="">
+                    </div>
+                </div>
+                <div class="tip"></div>
+                <div class="success"></div>
             </div>
-            <div class="tip"></div>
-            <div class="success"></div>
         </div>
     </div>
-</div>
-<script>
-    $(function () {
-        $('#submit2').click(function () {
-            var v = $('#uid').val();
-            if (v.length === 9) {
-                $('.tip').removeClass('success').text("添加中...");
+
+    <!--Call your modal-->
+    <a id="demo01" href="#animatedModal" style="display: none;">DEMO01</a>
+
+
+    <!--DEMO01-->
+    <div id="animatedModal">
+        <!--THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID -->
+        <div  id="btn-close-modal" class="close-animatedModal">
+            关闭
+        </div>
+
+        <div class="modal-content">
+            <h1>领取结果</h1>
+            <ul id="list">
+                <!--<li class="list-item"></li>-->
+            </ul>
+        </div>
+    </div>
+
+
+    <script src="./js/animatedModal.js"></script>
+
+
+    <script>
+        $("#demo01").animatedModal();
+
+
+        $(function () {
+            $('#submit2').click(function () {
+                var v = $('#uid').val();
+                if (v.length === 9) {
+                    $('.tip').removeClass('success').text("添加中...");
+                    $.ajax({
+                        url: '/add/' + v,
+                        dataType: 'json',
+                    }).success(function (res) {
+                        console.log(res);
+
+                        if (res.code === 200) {
+                            $('.tip').addClass('success').text('ID添加成功');
+                        } else {
+                            $('.tip').removeClass('success').text(res.data.msg);
+                        }
+                    }).error(function (error) {
+                        console.log(error);
+
+                        var msg = error.msg ? error.msg : '请找小陈同学！';
+                        $('.tip').removeClass('success').text(msg);
+                    });
+                } else {
+                    $('.tip').removeClass('success').text('ID要9位');
+                }
+            });
+
+            $('#submit1').click(function () {
+                if (!$('#dhm').val()) {
+                    $('.tip').removeClass('success').text('兑换码不能为空');
+                    return;
+                }
+                $('.tip').removeClass('success').text("兑换中...");
                 $.ajax({
-                    url: '/add/' + v,
+                    url: '/key/' + $('#dhm').val(),
                     dataType: 'json',
                 }).success(function (res) {
                     console.log(res);
 
                     if (res.code === 200) {
-                        $('.tip').addClass('success').text('ID添加成功');
+                        $('.tip').addClass('success').text('使用成功，请登录游戏领取奖励邮件');
+
+                        $('#list').empty();
+                        for(var nick_name in res.data) {
+                            var result = res.data[nick_name];
+                            $('#list').append('<li class="list-item">'+ nick_name + ': ' + result +'</li>');                        }
+
+                        $("#demo01").click();
                     } else {
                         $('.tip').removeClass('success').text(res.data.msg);
                     }
+
+
                 }).error(function (error) {
                     console.log(error);
 
-                    var msg = error.msg ? error.msg : '请找小陈同学！';
-                    $('.tip').removeClass('success').text(msg);
-                });
-            } else {
-                $('.tip').removeClass('success').text('ID要9位');
-            }
-        });
-
-        $('#submit1').click(function () {
-            if (!$('#dhm').val()) {
-                $('.tip').removeClass('success').text('兑换码不能为空');
-                return;
-            }
-            $('.tip').removeClass('success').text("兑换中...");
-            $.ajax({
-                url: '/key/' + $('#dhm').val(),
-                dataType: 'json',
-            }).success(function (res) {
-                console.log(res);
-
-                if (res.code === 200) {
-                    $('.tip').addClass('success').text('使用成功，请登录游戏领取奖励邮件');
-                } else {
-                    $('.tip').removeClass('success').text(res.data.msg);
-                }
-            }).error(function (error) {
-                console.log(error);
-
-                $('.tip').removeClass('success').text('领取失败, 请找小陈同学');
-            })
-        });
-    })
-</script>
+                    $('.tip').removeClass('success').text('领取失败, 请找小陈同学');
+                })
+            });
+        })
+    </script>
 
 </body></html>
